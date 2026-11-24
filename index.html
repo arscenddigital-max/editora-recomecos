@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editora Recomeços — Transformando histórias em livros</title>
+  <meta name="description" content="A Editora Recomeços publica livros que nascem de vidas reais: testemunhos de fé, superação da dependência química e misericórdia que restauram famílias. Conheça o catálogo e publique sua história." />
+  <meta name="theme-color" content="#0B1F45" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+  <!-- Open Graph (prévia ao compartilhar no WhatsApp / redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Editora Recomeços — Transformando histórias em livros" />
+  <meta property="og:description" content="Livros que nascem de vidas reais: fé, superação e misericórdia." />
+  <!-- Depois de ter o domínio, troque pelo endereço completo, ex.: https://www.editorarecomecos.com.br/assets/img/og-image.jpg -->
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/img/logo-amanhecer-header.png" as="image" />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-ready">
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Editora Recomeços — início">
+        <img class="brand__logo" src="assets/img/logo-amanhecer-header.png" alt="Editora Recomeços" width="480" height="320" />
+        <svg class="brand__edge" viewBox="0 0 60 100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="gEdge" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E9CB8B"/><stop offset=".55" stop-color="#C9A04E"/><stop offset="1" stop-color="#9C7430"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 0 H36 L14 100 H0 Z" fill="#FFFFFF"/>
+          <path d="M42 0 H49 L27 100 H20 Z" fill="url(#gEdge)"/>
+          <path d="M57 0 L35 100" stroke="#E9CB8B" stroke-opacity=".35" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#editora" class="nav__link">A Editora</a></li>
+          <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+          <li><a href="#autor" class="nav__link">Autor</a></li>
+          <li><a href="#publique" class="nav__link">Publique</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--gold btn--sm header__cta magnetic" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener">
+        <svg class="header__cta-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+        <span>Fale conosco</span>
+      </a>
+
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-mobile" id="menu-mobile" aria-hidden="true">
+    <ul>
+      <li><a href="#editora">A Editora</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#autor">Autor</a></li>
+      <li><a href="#publique">Publique seu livro</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a class="btn btn--gold" href="https://wa.me/5521981814835" target="_blank" rel="noopener">WhatsApp (21) 98181-4835</a>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <canvas class="hero__particles" aria-hidden="true"></canvas>
+      <div class="hero__sun" aria-hidden="true"></div>
+      <div class="hero__rays" aria-hidden="true"></div>
+      <svg class="hero__path" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="gPath" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#C9A04E" stop-opacity="0"/>
+            <stop offset=".35" stop-color="#E9CB8B" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#FFF3D6"/>
+          </linearGradient>
+        </defs>
+        <path class="hero__road" d="M620 920 C 560 820, 900 780, 820 700 C 740 620, 600 640, 690 560 C 780 480, 960 520, 1010 440 C 1050 370, 980 330, 1040 290" stroke="url(#gPath)" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow reveal" data-delay="0">Transformando histórias em livros</p>
+          <h1 class="hero__title" data-split-words>
+            Toda história merece um <em>recomeço.</em>
+          </h1>
+          <p class="hero__lead reveal" data-delay="6">
+            Publicamos livros que nascem de vidas reais — testemunhos de fé, superação e misericórdia que alcançam quem lê e restauram famílias inteiras.
+          </p>
+          <div class="hero__actions reveal" data-delay="8">
+            <a href="#catalogo" class="btn btn--gold magnetic"><span>Conheça nossos livros</span></a>
+            <a href="#publique" class="btn btn--ghost magnetic"><span>Publique sua história</span></a>
+          </div>
+        </div>
+
+        <div class="hero__books" aria-hidden="true">
+          <div class="hero__stack" data-parallax-mouse>
+            <img class="stack__book stack__book--1" src="assets/img/livro-um-lapis-nas-maos-de-deus.webp" alt="" />
+            <img class="stack__book stack__book--2" src="assets/img/livro-viver-e-complexo.webp" alt="" />
+            <img class="stack__book stack__book--3" src="assets/img/livro-gritos-pela-sobriedade.webp" alt="" />
+            <img class="stack__book stack__book--4" src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <a href="#editora" class="hero__scroll" aria-label="Rolar para conhecer a editora">
+        <span>Role</span><i></i>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Encontro</span><b>✦</b><span>Esperança</span><b>✦</b><span>Restauração</span><b>✦</b><span>Propósito</span><b>✦</b><span>Fé</span><b>✦</b><span>Misericórdia</span><b>✦</b>
+        <span>Encontro</span><b>✦</b><span>Esperança</span><b>✦</b><span>Restauração</span><b>✦</b><span>Propósito</span><b>✦</b><span>Fé</span><b>✦</b><span>Misericórdia</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ A EDITORA ============ -->
+    <section class="section about" id="editora">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--dark reveal">A Editora</p>
+          <span class="fleur reveal" aria-hidden="true">⚜</span>
+        </div>
+
+        <p class="manifesto" data-scrub>
+          Acreditamos que nenhuma vida está perdida antes de receber uma oportunidade de recomeçar. Por isso, damos forma de livro a histórias de dor, encontro e misericórdia — para que cada página seja uma mão estendida a quem ainda está no caminho.
+        </p>
+
+        <div class="pillars">
+          <article class="pillar reveal" data-delay="0">
+            <span class="pillar__num">01</span>
+            <h3>Histórias reais</h3>
+            <p>Testemunhos de pessoas e famílias que atravessaram a queda e encontraram o caminho de volta — contados com verdade e sem romantizar a dor.</p>
+          </article>
+          <article class="pillar reveal" data-delay="2">
+            <span class="pillar__num">02</span>
+            <h3>Fé que restaura</h3>
+            <p>Obras de inspiração cristã que falam de misericórdia, esperança e propósito, para quem luta e para quem ama alguém nessa batalha.</p>
+          </article>
+          <article class="pillar reveal" data-delay="4">
+            <span class="pillar__num">03</span>
+            <h3>Do manuscrito ao livro</h3>
+            <p>Acompanhamos autores em cada etapa, para que a sua história chegue às mãos de quem precisa lê-la.</p>
+          </article>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__n" data-count="4">0</span><span class="stat__l">títulos no catálogo</span></div>
+          <div class="stat reveal" data-delay="2"><span class="stat__n"><span data-count="3">0</span><sup>ª</sup></span><span class="stat__l">edição de “Um Lápis nas Mãos de Deus”</span></div>
+          <div class="stat reveal" data-delay="4"><span class="stat__n" data-count="21">0</span><span class="stat__l">capítulos de histórias reais em “O Chão Não É Moradia”</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESTAQUE ============ -->
+    <section class="feature" id="destaque">
+      <div class="feature__bg" aria-hidden="true"></div>
+      <div class="container feature__grid">
+        <div class="feature__cover reveal-clip">
+          <div class="book3d" data-tilt>
+            <img src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="Capa do livro O Chão Não É Moradia para os Filhos de Deus, de Irmão Ricardo Lavra Lima" loading="lazy" />
+            <span class="book3d__spine"></span>
+            <span class="book3d__shine"></span>
+          </div>
+        </div>
+        <div class="feature__content">
+          <p class="eyebrow reveal">Em destaque</p>
+          <h2 class="feature__title reveal" data-delay="1">O Chão Não É Moradia para os Filhos de Deus</h2>
+          <p class="feature__author reveal" data-delay="2">Irmão Ricardo Lavra Lima</p>
+          <blockquote class="feature__quote reveal" data-delay="3">
+            Quantas lágrimas uma mãe derrama enquanto espera seu filho voltar?
+          </blockquote>
+          <p class="feature__text reveal" data-delay="4">
+            Em 21 capítulos marcados por histórias reais, testemunhos e profundas reflexões, o autor conduz o leitor por uma realidade que muitos preferem não enxergar: o sofrimento provocado pela dependência química e as feridas que ela deixa em famílias inteiras.
+          </p>
+          <ul class="tags reveal" data-delay="5">
+            <li>Encontro</li><li>Esperança</li><li>Restauração</li><li>Propósito</li>
+          </ul>
+          <div class="feature__buy reveal" data-delay="6">
+            <span class="price"><small>R$</small>49,90</span>
+            <button class="btn btn--gold magnetic" data-open-book="o-chao"><span>Ler resumo completo</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="section catalog" id="catalogo">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--dark reveal">Catálogo</p>
+            <h2 class="h2 reveal" data-delay="1">Livros que <em>estendem a mão</em></h2>
+          </div>
+          <p class="section-head__aside reveal" data-delay="2">Clique em um livro para ler o resumo e fazer seu pedido diretamente pelo WhatsApp.</p>
+        </div>
+
+        <div class="books">
+          <article class="book reveal" data-delay="0">
+            <button class="book__btn" data-open-book="o-chao" aria-label="Ver detalhes de O Chão Não É Moradia para os Filhos de Deus">
+              <div class="book__cover" data-tilt>
+                <img src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="Capa de O Chão Não É Moradia para os Filhos de Deus" loading="lazy" />
+                <span class="book__shine"></span>
+              </div>
+              <span class="book__badge">Destaque</span>
+            </button>
+            <div class="book__info">
+              <h3>O Chão Não É Moradia para os Filhos de Deus</h3>
+              <p class="book__author">Irmão Ricardo Lavra Lima</p>
+              <div class="book__row"><span class="price price--sm"><small>R$</small>49,90</span><button class="link-arrow" data-open-book="o-chao">Resumo <i>→</i></button></div>
+            </div>
+          </article>
+
+          <article class="book reveal" data-delay="2">
+            <button class="book__btn" data-open-book="gritos" aria-label="Ver detalhes de Gritos pela Sobriedade">
+              <div class="book__cover" data-tilt>
+                <img src="assets/img/livro-gritos-pela-sobriedade.webp" alt="Capa de Gritos pela Sobriedade" loading="lazy" />
+                <span class="book__shine"></span>
+              </div>
+            </button>
+            <div class="book__info">
+              <h3>Gritos pela Sobriedade</h3>
+              <p class="book__author">Irmão Ricardo Lavra</p>
+              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="gritos">Resumo <i>→</i></button></div>
+            </div>
+          </article>
+
+          <article class="book reveal" data-delay="4">
+            <button class="book__btn" data-open-book="viver" aria-label="Ver detalhes de Viver é Complexo — Saindo do Inferno">
+              <div class="book__cover" data-tilt>
+                <img src="assets/img/livro-viver-e-complexo.webp" alt="Capa de Viver é Complexo — Saindo do Inferno" loading="lazy" />
+                <span class="book__shine"></span>
+              </div>
+              <span class="book__badge book__badge--alt">HQ</span>
+            </button>
+            <div class="book__info">
+              <h3>Viver é Complexo — Saindo do Inferno</h3>
+              <p class="book__author">Ricardo Lavra Lima &amp; Gilliard Viana</p>
+              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="viver">Resumo <i>→</i></button></div>
+            </div>
+          </article>
+
+          <article class="book reveal" data-delay="6">
+            <button class="book__btn" data-open-book="lapis" aria-label="Ver detalhes de Um Lápis nas Mãos de Deus">
+              <div class="book__cover" data-tilt>
+                <img src="assets/img/livro-um-lapis-nas-maos-de-deus.webp" alt="Capa de Um Lápis nas Mãos de Deus, 3ª edição" loading="lazy" />
+                <span class="book__shine"></span>
+              </div>
+              <span class="book__badge book__badge--alt">3ª edição</span>
+            </button>
+            <div class="book__info">
+              <h3>Um Lápis nas Mãos de Deus</h3>
+              <p class="book__author">Irmão Ricardo &amp; Diogo Andrade</p>
+              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="lapis">Resumo <i>→</i></button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARA QUEM ============ -->
+    <section class="audience">
+      <div class="container audience__grid">
+        <div>
+          <p class="eyebrow reveal">Para quem escrevemos</p>
+          <h2 class="h2 h2--light reveal" data-delay="1">Livros para quem <em>não desistiu</em> do recomeço</h2>
+        </div>
+        <ul class="audience__list">
+          <li class="reveal" data-delay="1"><span class="check"></span>Quem luta contra vícios e procura uma saída</li>
+          <li class="reveal" data-delay="2"><span class="check"></span>Quem ama alguém que está nessa batalha</li>
+          <li class="reveal" data-delay="3"><span class="check"></span>Quem trabalha com recuperação e acolhimento</li>
+          <li class="reveal" data-delay="4"><span class="check"></span>Quem acredita que a sobriedade — e a restauração — são possíveis</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ AUTOR ============ -->
+    <section class="section author" id="autor">
+      <div class="container author__grid">
+        <div class="author__visual reveal-clip">
+          <div class="author__frame">
+            <span class="author__initials">IR</span>
+            <svg class="author__ring" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="circ" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+              <text><textPath href="#circ">ENCONTRO • ESPERANÇA • RESTAURAÇÃO • PROPÓSITO • </textPath></text>
+            </svg>
+          </div>
+        </div>
+        <div class="author__content">
+          <p class="eyebrow eyebrow--dark reveal">Autor</p>
+          <h2 class="h2 reveal" data-delay="1">Irmão Ricardo <em>Lavra Lima</em></h2>
+          <p class="author__role reveal" data-delay="2">Fundador da Comunidade Católica Servos da Divina Misericórdia</p>
+          <p class="reveal" data-delay="3">
+            Irmão Ricardo dedica sua escrita a quem a sociedade muitas vezes considera perdido. Em seus livros, reúne histórias reais de dependentes químicos, mães que nunca desistiram e famílias que aprenderam a esperar — sempre à luz da Misericórdia Divina.
+          </p>
+          <p class="reveal" data-delay="4">
+            Ao lado de coautores como Diogo Andrade e Gilliard Viana, transforma testemunhos em obras que acolhem, alertam e apontam um caminho de volta.
+          </p>
+          <blockquote class="author__quote reveal" data-delay="5">“O chão não é moradia para os filhos de Deus.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLIQUE ============ -->
+    <section class="section publish" id="publique">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--dark reveal">Publique com a Recomeços</p>
+          <h2 class="h2 reveal" data-delay="1">Sua história pode ser o <em>recomeço</em> de alguém</h2>
+          <p class="section-head__lead reveal" data-delay="2">Tem um testemunho, uma reflexão ou uma obra de fé pronta para ganhar o mundo? Caminhamos com você do primeiro rascunho ao livro nas mãos do leitor.</p>
+        </div>
+
+        <ol class="steps">
+          <svg class="steps__line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="2" x2="1000" y2="2"/></svg>
+          <li class="step reveal" data-delay="0"><span class="step__dot">1</span><h3>Conversa inicial</h3><p>Ouvimos sua história e entendemos o propósito do seu livro.</p></li>
+          <li class="step reveal" data-delay="2"><span class="step__dot">2</span><h3>Leitura e orientação</h3><p>Avaliamos o material e indicamos o melhor caminho editorial.</p></li>
+          <li class="step reveal" data-delay="4"><span class="step__dot">3</span><h3>Texto e capa</h3><p>Revisão, diagramação e uma capa à altura da sua mensagem.</p></li>
+          <li class="step reveal" data-delay="6"><span class="step__dot">4</span><h3>Livro publicado</h3><p>Sua obra impressa e pronta para alcançar novos leitores.</p></li>
+        </ol>
+
+        <div class="publish__cta reveal">
+          <a class="btn btn--navy magnetic" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Gostaria%20de%20publicar%20meu%20livro%20com%20a%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener"><span>Quero publicar meu livro</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta" id="contato">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <span class="fleur fleur--light reveal" aria-hidden="true">⚜</span>
+        <h2 class="cta__title" data-split-words>Fale com a <em>Editora Recomeços</em></h2>
+        <p class="cta__lead reveal" data-delay="3">Pedidos de livros, publicações, palestras e parcerias — atendemos pelo WhatsApp.</p>
+        <a class="whats-big reveal magnetic" data-delay="5" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener">
+          <span class="whats-big__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.8 10.1 5 16 5s10.7 4.8 10.7 10.6S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></span>
+          <span class="whats-big__text"><small>WhatsApp</small>(21) 98181-4835</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/logo-sem-contato.webp" alt="Logotipo da Editora Recomeços" width="220" height="179" loading="lazy" />
+      </div>
+      <div class="footer__col">
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#editora">A Editora</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#autor">Autor</a></li>
+          <li><a href="#publique">Publique seu livro</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Livros</h4>
+        <ul>
+          <li><button data-open-book="o-chao">O Chão Não É Moradia</button></li>
+          <li><button data-open-book="gritos">Gritos pela Sobriedade</button></li>
+          <li><button data-open-book="viver">Viver é Complexo</button></li>
+          <li><button data-open-book="lapis">Um Lápis nas Mãos de Deus</button></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5521981814835" target="_blank" rel="noopener">WhatsApp (21) 98181-4835</a></li>
+          <li>Rio de Janeiro — RJ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> Editora Recomeços. Todos os direitos reservados.</p>
+      <p class="footer__motto">Transformando histórias em livros</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a class="whats-float" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <!-- ============ MODAL DO LIVRO ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel">
+      <button class="modal__close" data-close aria-label="Fechar">×</button>
+      <div class="modal__grid">
+        <div class="modal__cover"><img id="modal-img" src="" alt="" /></div>
+        <div class="modal__body">
+          <p class="eyebrow eyebrow--dark" id="modal-kicker"></p>
+          <h3 id="modal-title"></h3>
+          <p class="modal__author" id="modal-author"></p>
+          <div class="modal__text" id="modal-text"></div>
+          <div class="modal__buy">
+            <span class="price" id="modal-price"></span>
+            <a class="btn btn--gold" id="modal-whats" href="#" target="_blank" rel="noopener"><span>Comprar pelo WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/books.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
