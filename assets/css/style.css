@@ -707,16 +707,31 @@ body.is-ready .stack__book--4 { transform: translate(-50%, -50%) translate(84%, 
   opacity: 0; transition: opacity .3s var(--ease), transform .4s var(--ease);
 }
 .fan__cta i { font-style: normal; margin-left: 4px; }
-/* o livro sob o mouse vem para a frente, endireita e cresce */
-.fan__book:hover, .fan__book:focus-visible { z-index: 40; outline: none; }
-.fan__book:hover .fan__card, .fan__book:focus-visible .fan__card {
+/* livro escolhido: vem para a frente, endireita e cresce.
+   No computador: passar o mouse. No celular: tocar ou deslizar o dedo (classe .is-selected). */
+.fan__book.is-selected, .fan__book:focus-visible { z-index: 40; outline: none; }
+.fan__book.is-selected .fan__card, .fan__book:focus-visible .fan__card {
   transform: translateY(-42px) rotate(calc(var(--o) * -6deg)) scale(1.22);
   box-shadow: 0 50px 90px -24px rgba(0, 0, 0, .9), 0 0 0 2px rgba(233, 203, 139, .85), 0 0 50px rgba(233, 203, 139, .35);
 }
-.fan__book:hover .fan__cta, .fan__book:focus-visible .fan__cta { opacity: 1; transform: translate(-50%, 0); }
-/* os outros livros escurecem e os da frente se afastam um pouco */
-.hero__fan:has(.fan__book:hover) .fan__book:not(:hover) { filter: brightness(.55) saturate(.8); }
-@media (hover: none) { .fan__cta { opacity: 1; transform: translate(-50%, 0); font-size: 10px; padding: 6px 10px; bottom: 8px; } .fan__book:not([style*="--i:7"]) .fan__cta { display: none; } }
+.fan__book.is-selected .fan__cta, .fan__book:focus-visible .fan__cta { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.fan__cta { pointer-events: none; }
+.hero__fan.has-selected .fan__book:not(.is-selected) { filter: brightness(.55) saturate(.8); }
+@media (hover: hover) and (pointer: fine) {
+  .fan__book:hover { z-index: 40; }
+  .fan__book:hover .fan__card {
+    transform: translateY(-42px) rotate(calc(var(--o) * -6deg)) scale(1.22);
+    box-shadow: 0 50px 90px -24px rgba(0, 0, 0, .9), 0 0 0 2px rgba(233, 203, 139, .85), 0 0 50px rgba(233, 203, 139, .35);
+  }
+  .fan__book:hover .fan__cta { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  .hero__fan:has(.fan__book:hover) .fan__book:not(:hover) { filter: brightness(.55) saturate(.8); }
+}
+/* celular: o dedo deslizando para os lados escolhe livros; para cima/baixo continua rolando a página */
+@media (hover: none), (pointer: coarse) {
+  .hero__fan { touch-action: pan-y; }
+  .fan__cta { font-size: 10px; padding: 6px 10px; bottom: 8px; }
+  .fan__book.is-selected .fan__card { transform: translateY(-34px) rotate(calc(var(--o) * -6deg)) scale(1.35); }
+}
 @media (max-width: 900px) { .hero__fan { --w: 120px; --step: 30px; } }
 @media (max-width: 560px) { .hero__fan { --w: 84px; --step: 20px; } }
 

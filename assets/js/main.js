@@ -270,6 +270,60 @@
     });
   }
 
+  /* ---------- Leque de livros: efeito baralho (mouse e dedo) ---------- */
+  const fan = $(".hero__fan");
+  if (fan) {
+    const fanBooks = $$(".fan__book", fan);
+    let selected = null, selBeforeTouch = null, lastPointer = "mouse";
+    fanBooks.forEach(btn => {
+      const t = window.LIVROS?.[btn.dataset.book]?.titulo;
+      if (t) btn.setAttribute("aria-label", `${t} — toque para destacar`);
+    });
+    const select = btn => {
+      if (selected === btn) return;
+      selected?.classList.remove("is-selected");
+      selected = btn;
+      btn?.classList.add("is-selected");
+      fan.classList.toggle("has-selected", !!btn);
+    };
+    // livro mais próximo do dedo (pela posição do livro no leque, que não se mexe)
+    const nearest = x => {
+      let best = null, dist = Infinity;
+      fanBooks.forEach(b => {
+        const r = b.getBoundingClientRect();
+        const d = Math.abs(r.left + r.width / 2 - x);
+        if (d < dist) { dist = d; best = b; }
+      });
+      return best;
+    };
+    fan.addEventListener("pointerdown", e => (lastPointer = e.pointerType));
+    fan.addEventListener("touchstart", e => {
+      lastPointer = "touch";
+      selBeforeTouch = selected;
+      // tocar no botão "Leia o resumo" do livro já destacado não troca a seleção
+      if (e.target.closest(".fan__cta") && e.target.closest(".fan__book") === selected) return;
+      select(nearest(e.touches[0].clientX));
+    }, { passive: true });
+    fan.addEventListener("touchmove", e => select(nearest(e.touches[0].clientX)), { passive: true });
+
+    fan.addEventListener("click", e => {
+      const btn = e.target.closest(".fan__book");
+      if (!btn) return;
+      const onCta = e.target.closest(".fan__cta");
+      if (lastPointer === "touch") {
+        // celular: só abre o resumo pelo botão, e só se o livro já estava destacado
+        if (onCta && btn === selected && btn === selBeforeTouch) return; // deixa abrir o resumo
+        e.preventDefault(); e.stopPropagation();
+        select(btn);
+        return;
+      }
+      // computador: clicar no livro também abre o resumo
+      if (!onCta) { e.preventDefault(); e.stopPropagation(); $(".fan__cta", btn).click(); }
+    });
+    // tocar fora do leque tira o destaque
+    document.addEventListener("touchstart", e => { if (!fan.contains(e.target)) select(null); }, { passive: true });
+  }
+
   /* ---------- Parallax dos livros no hero ---------- */
   const stack = $("[data-parallax-mouse]");
   if (stack && finePointer && !reduceMotion) {
