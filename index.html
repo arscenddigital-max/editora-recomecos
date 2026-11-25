@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editora Recomeços — Transformando histórias em livros</title>
-  <meta name="description" content="A Editora Recomeços publica livros que nascem de vidas reais: testemunhos de fé, superação da dependência química e misericórdia que restauram famílias. Conheça o catálogo e publique sua história." />
+  <meta name="description" content="Editora cristã que transforma histórias, testemunhos e conhecimentos em livros. Revisão, diagramação, capas, ISBN, publicação física e digital e apoio no lançamento. Uma iniciativa da Comunidade Servos da Divina Misericórdia." />
   <meta name="theme-color" content="#0B1F45" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
@@ -13,12 +13,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="Editora Recomeços — Transformando histórias em livros" />
-  <meta property="og:description" content="Livros que nascem de vidas reais: fé, superação e misericórdia." />
+  <meta property="og:description" content="Transformamos histórias, testemunhos e conhecimentos em livros. Publique o seu com a Recomeços." />
   <!-- Depois de ter o domínio, troque pelo endereço completo, ex.: https://www.editorarecomecos.com.br/assets/img/og-image.jpg -->
   <meta property="og:image" content="assets/img/og-image.jpg" />
 
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/img/logo-amanhecer-header.png" as="image" />
+  <link rel="preload" href="assets/img/logo-recomecos-clara.webp" as="image" />
   <link rel="stylesheet" href="assets/css/fonts.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -27,29 +27,19 @@
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 
-  <!-- ============ HEADER ============ -->
+  <!-- ============ CABEÇALHO ============ -->
   <header class="header" id="topo">
     <div class="container header__inner">
       <a href="#inicio" class="brand" aria-label="Editora Recomeços — início">
-        <img class="brand__logo" src="assets/img/logo-amanhecer-header.png" alt="Editora Recomeços" width="480" height="320" />
-        <svg class="brand__edge" viewBox="0 0 60 100" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="gEdge" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#E9CB8B"/><stop offset=".55" stop-color="#C9A04E"/><stop offset="1" stop-color="#9C7430"/>
-            </linearGradient>
-          </defs>
-          <path d="M0 0 H36 L14 100 H0 Z" fill="#FFFFFF"/>
-          <path d="M42 0 H49 L27 100 H20 Z" fill="url(#gEdge)"/>
-          <path d="M57 0 L35 100" stroke="#E9CB8B" stroke-opacity=".35" stroke-width="1" vector-effect="non-scaling-stroke"/>
-        </svg>
+        <img class="brand__logo" src="assets/img/logo-recomecos-clara.webp" alt="Editora Recomeços" width="447" height="150" />
       </a>
 
       <nav class="nav" aria-label="Navegação principal">
         <ul class="nav__list">
           <li><a href="#editora" class="nav__link">A Editora</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
           <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
-          <li><a href="#autor" class="nav__link">Autor</a></li>
-          <li><a href="#publique" class="nav__link">Publique</a></li>
+          <li><a href="#lancamentos" class="nav__link">Lançamentos</a></li>
           <li><a href="#contato" class="nav__link">Contato</a></li>
         </ul>
       </nav>
@@ -68,16 +58,16 @@
   <div class="menu-mobile" id="menu-mobile" aria-hidden="true">
     <ul>
       <li><a href="#editora">A Editora</a></li>
+      <li><a href="#servicos">Serviços</a></li>
       <li><a href="#catalogo">Catálogo</a></li>
-      <li><a href="#autor">Autor</a></li>
-      <li><a href="#publique">Publique seu livro</a></li>
+      <li><a href="#lancamentos">Lançamentos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <a class="btn btn--gold" href="https://wa.me/5521981814835" target="_blank" rel="noopener">WhatsApp (21) 98181-4835</a>
   </div>
 
   <main>
-    <!-- ============ HERO ============ -->
+    <!-- ============ INÍCIO ============ -->
     <section class="hero" id="inicio">
       <canvas class="hero__particles" aria-hidden="true"></canvas>
       <div class="hero__sun" aria-hidden="true"></div>
@@ -97,23 +87,27 @@
         <div class="hero__content">
           <p class="eyebrow reveal" data-delay="0">Transformando histórias em livros</p>
           <h1 class="hero__title" data-split-words>
-            Toda história merece um <em>recomeço.</em>
+            Toda história merece ser <em>contada.</em>
           </h1>
           <p class="hero__lead reveal" data-delay="6">
-            Publicamos livros que nascem de vidas reais — testemunhos de fé, superação e misericórdia que alcançam quem lê e restauram famílias inteiras.
+            Transformamos palavras em instrumentos de esperança, conhecimento e evangelização — do primeiro rascunho ao livro nas mãos do leitor.
           </p>
           <div class="hero__actions reveal" data-delay="8">
-            <a href="#catalogo" class="btn btn--gold magnetic"><span>Conheça nossos livros</span></a>
-            <a href="#publique" class="btn btn--ghost magnetic"><span>Publique sua história</span></a>
+            <a href="#publique" class="btn btn--gold magnetic"><span>Quero publicar meu livro</span></a>
+            <a href="#catalogo" class="btn btn--ghost magnetic"><span>Conheça o catálogo</span></a>
           </div>
         </div>
 
-        <div class="hero__books" aria-hidden="true">
-          <div class="hero__stack" data-parallax-mouse>
-            <img class="stack__book stack__book--1" src="assets/img/livro-um-lapis-nas-maos-de-deus.webp" alt="" />
-            <img class="stack__book stack__book--2" src="assets/img/livro-viver-e-complexo.webp" alt="" />
-            <img class="stack__book stack__book--3" src="assets/img/livro-gritos-pela-sobriedade.webp" alt="" />
-            <img class="stack__book stack__book--4" src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="" />
+        <div class="hero__books">
+          <div class="hero__stack hero__fan" data-parallax-mouse>
+            <button class="fan__book" style="--i:0" data-open-book="lapis" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-um-lapis-nas-maos-de-deus.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:1" data-open-book="viver" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-viver-e-complexo.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:2" data-open-book="gritos" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-gritos-pela-sobriedade.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:3" data-open-book="sao-jose-de-anchieta" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-sao-jose-de-anchieta-em-mage.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:4" data-open-book="oracoes-sobriedade" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-oracoes-pela-sobriedade.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:5" data-open-book="drogas-liberdade" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-drogas-liberdade-ou-ilusao.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:6" data-open-book="drogas-sera" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-drogas-sera-que-preciso-disso.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
+            <button class="fan__book" style="--i:7" data-open-book="o-chao" aria-label="Leia o resumo"><span class="fan__card"><img src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="" /><span class="fan__cta">Leia o resumo <i>→</i></span></span></button>
           </div>
         </div>
       </div>
@@ -123,11 +117,11 @@
       </a>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
+    <!-- ============ FAIXA DE VALORES ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Encontro</span><b>✦</b><span>Esperança</span><b>✦</b><span>Restauração</span><b>✦</b><span>Propósito</span><b>✦</b><span>Fé</span><b>✦</b><span>Misericórdia</span><b>✦</b>
-        <span>Encontro</span><b>✦</b><span>Esperança</span><b>✦</b><span>Restauração</span><b>✦</b><span>Propósito</span><b>✦</b><span>Fé</span><b>✦</b><span>Misericórdia</span><b>✦</b>
+        <span>Esperança</span><b>✦</b><span>Conhecimento</span><b>✦</b><span>Evangelização</span><b>✦</b><span>Testemunho</span><b>✦</b><span>Fé</span><b>✦</b><span>Novos caminhos</span><b>✦</b>
+        <span>Esperança</span><b>✦</b><span>Conhecimento</span><b>✦</b><span>Evangelização</span><b>✦</b><span>Testemunho</span><b>✦</b><span>Fé</span><b>✦</b><span>Novos caminhos</span><b>✦</b>
       </div>
     </div>
 
@@ -140,62 +134,318 @@
         </div>
 
         <p class="manifesto" data-scrub>
-          Acreditamos que nenhuma vida está perdida antes de receber uma oportunidade de recomeçar. Por isso, damos forma de livro a histórias de dor, encontro e misericórdia — para que cada página seja uma mão estendida a quem ainda está no caminho.
+          A Editora Recomeços nasce do desejo de transformar palavras em instrumentos de esperança, conhecimento, evangelização e transformação de vidas.
         </p>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__lead reveal">Uma iniciativa de <strong>Ricardo Lavra Lima</strong> e <strong>Ricardo Lavra Lima Filho</strong>, fundamentada nos valores cristãos, que acredita que cada pessoa carrega consigo uma história que merece ser contada, preservada e compartilhada.</p>
+            <p class="reveal" data-delay="1">Nossa proposta é oferecer espaço tanto para <strong>novos escritores</strong> quanto para <strong>autores que desejam publicar suas obras</strong>, tornando realidade o sonho de escrever e lançar um livro.</p>
+            <p class="reveal" data-delay="2">Mais do que publicar livros, queremos eternizar testemunhos, transmitir conhecimentos, despertar a fé e inspirar novos caminhos.</p>
+          </div>
+
+          <aside class="mission reveal-clip">
+            <div class="mission__card">
+              <span class="mission__orn" aria-hidden="true">⚜</span>
+              <p class="mission__label">Nossa missão</p>
+              <p class="mission__text">Transformar histórias, experiências e conhecimentos em obras literárias que alcancem corações e contribuam para a construção de uma sociedade melhor.</p>
+              <span class="mission__sign">Editora Recomeços</span>
+            </div>
+          </aside>
+        </div>
 
         <div class="pillars">
           <article class="pillar reveal" data-delay="0">
-            <span class="pillar__num">01</span>
-            <h3>Histórias reais</h3>
-            <p>Testemunhos de pessoas e famílias que atravessaram a queda e encontraram o caminho de volta — contados com verdade e sem romantizar a dor.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 38V12c6-3 11-3 16 1 5-4 10-4 16-1v26c-6-3-11-3-16 1-5-4-10-4-16-1z"/><path d="M24 13v25"/></svg></span>
+            <h3>Eternizar testemunhos</h3>
+            <p>Histórias de vida, de fé e de superação preservadas em páginas que atravessam gerações.</p>
           </article>
           <article class="pillar reveal" data-delay="2">
-            <span class="pillar__num">02</span>
-            <h3>Fé que restaura</h3>
-            <p>Obras de inspiração cristã que falam de misericórdia, esperança e propósito, para quem luta e para quem ama alguém nessa batalha.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6l4 10h10l-8 7 3 11-9-6-9 6 3-11-8-7h10z"/><path d="M14 42h20"/></svg></span>
+            <h3>Transmitir conhecimentos</h3>
+            <p>Obras de formação, história e espiritualidade que ensinam, preservam a memória e ampliam horizontes.</p>
           </article>
           <article class="pillar reveal" data-delay="4">
-            <span class="pillar__num">03</span>
-            <h3>Do manuscrito ao livro</h3>
-            <p>Acompanhamos autores em cada etapa, para que a sua história chegue às mãos de quem precisa lê-la.</p>
+            <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6v36M14 16h20"/><circle cx="24" cy="24" r="19"/></svg></span>
+            <h3>Despertar a fé</h3>
+            <p>Livros que evangelizam, consolam e inspiram novos caminhos em quem os lê.</p>
           </article>
-        </div>
-
-        <div class="stats">
-          <div class="stat reveal"><span class="stat__n" data-count="4">0</span><span class="stat__l">títulos no catálogo</span></div>
-          <div class="stat reveal" data-delay="2"><span class="stat__n"><span data-count="3">0</span><sup>ª</sup></span><span class="stat__l">edição de “Um Lápis nas Mãos de Deus”</span></div>
-          <div class="stat reveal" data-delay="4"><span class="stat__n" data-count="21">0</span><span class="stat__l">capítulos de histórias reais em “O Chão Não É Moradia”</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ DESTAQUE ============ -->
+    <!-- ============ SERVIÇOS (vitrine interativa) ============ -->
+    <section class="services" id="servicos">
+      <div class="services__glow" aria-hidden="true"></div>
+      <div class="services__glow services__glow--2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--split services__head">
+          <div>
+            <p class="eyebrow reveal">Nossos serviços</p>
+            <h2 class="h2 h2--light reveal" data-delay="1">Do primeiro rascunho ao <em>livro publicado</em></h2>
+          </div>
+          <p class="section-head__aside services__aside reveal" data-delay="2">Um estúdio editorial completo para cuidar de cada etapa da sua obra. Explore os 8 serviços — clique nas setas ou nos números.</p>
+        </div>
+
+        <div class="showcase reveal" data-showcase>
+          <div class="showcase__stage" aria-hidden="true">
+            <span class="showcase__ring"></span>
+            <svg class="stage__svg" viewBox="0 0 400 400">
+                <defs>
+                  <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#E9CB8B"/><stop offset=".55" stop-color="#C9A04E"/><stop offset="1" stop-color="#9C7430"/>
+                  </linearGradient>
+                  <radialGradient id="gSun" cx=".5" cy=".5" r=".5">
+                    <stop offset="0" stop-color="#FFF3D6"/><stop offset=".5" stop-color="#E9CB8B" stop-opacity=".55"/><stop offset="1" stop-color="#C9A04E" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- 1. Orientação e acompanhamento: o caminho até a obra -->
+                <g class="scene is-active" data-scene="0">
+                  <circle cx="300" cy="96" r="70" fill="url(#gSun)" class="pulse"/>
+                  <path class="ln" pathLength="1" d="M70 350 C 120 300, 260 320, 210 260 C 160 200, 120 210, 170 160 C 210 120, 270 140, 300 100" />
+                  <circle cx="70" cy="350" r="8" class="dot"/>
+                  <g class="float"><path class="fill-gold" d="M300 70 l7 18 h19 l-15 12 6 19 -17 -11 -17 11 6 -19 -15 -12 h19z"/></g>
+                  <circle cx="190" cy="236" r="5" class="dot d2"/><circle cx="150" cy="186" r="5" class="dot d3"/><circle cx="246" cy="128" r="5" class="dot d4"/>
+                </g>
+
+                <!-- 2. Revisão e correção de textos -->
+                <g class="scene" data-scene="1">
+                  <rect x="90" y="60" width="220" height="290" rx="10" class="paper"/>
+                  <g class="lines">
+                    <path class="ln" pathLength="1" d="M120 110 H280"/><path class="ln" pathLength="1" d="M120 140 H260"/>
+                    <path class="ln" pathLength="1" d="M120 170 H280"/><path class="ln" pathLength="1" d="M120 200 H230"/>
+                    <path class="ln" pathLength="1" d="M120 230 H280"/><path class="ln" pathLength="1" d="M120 260 H250"/>
+                  </g>
+                  <path class="mark" pathLength="1" d="M160 170 H230"/>
+                  <path class="mark" pathLength="1" d="M236 196 c 10 -14 26 -14 30 -2"/>
+                  <path class="check" pathLength="1" d="M250 290 l14 14 26 -30"/>
+                  <g class="float"><path class="fill-gold" d="M300 70 l26 26 -110 110 -32 8 8 -32z"/><path d="M300 70 l26 26" class="stroke-navy"/></g>
+                </g>
+
+                <!-- 3. Diagramação de livros -->
+                <g class="scene" data-scene="2">
+                  <path class="paper" d="M60 90 Q130 70 200 95 V330 Q130 305 60 325z"/>
+                  <path class="paper" d="M340 90 Q270 70 200 95 V330 Q270 305 340 325z"/>
+                  <g class="grid"><path class="ln faint" pathLength="1" d="M85 110 V310"/><path class="ln faint" pathLength="1" d="M175 110 V310"/><path class="ln faint" pathLength="1" d="M225 110 V310"/><path class="ln faint" pathLength="1" d="M315 110 V310"/></g>
+                  <rect class="block b1" x="90" y="120" width="80" height="44" rx="3"/>
+                  <rect class="block b2" x="90" y="176" width="80" height="8" rx="2"/>
+                  <rect class="block b3" x="90" y="192" width="70" height="8" rx="2"/>
+                  <rect class="block b4" x="90" y="208" width="78" height="8" rx="2"/>
+                  <rect class="block b5" x="230" y="120" width="80" height="8" rx="2"/>
+                  <rect class="block b6" x="230" y="136" width="72" height="8" rx="2"/>
+                  <rect class="block b7" x="230" y="160" width="80" height="90" rx="3"/>
+                  <rect class="block b8" x="230" y="262" width="66" height="8" rx="2"/>
+                </g>
+
+                <!-- 4. Capas e projetos gráficos -->
+                <g class="scene" data-scene="3">
+                  <g class="float-slow">
+                    <rect x="120" y="60" width="170" height="250" rx="6" class="cover"/>
+                    <rect x="120" y="60" width="14" height="250" class="spine"/>
+                    <circle cx="210" cy="170" r="46" fill="url(#gSun)"/>
+                    <path class="ln" pathLength="1" d="M210 120 V212 M186 146 H234"/>
+                    <path class="ln" pathLength="1" d="M150 250 H260"/><path class="ln" pathLength="1" d="M170 270 H240"/>
+                  </g>
+                  <circle cx="320" cy="250" r="20" class="sw sw1"/><circle cx="320" cy="300" r="20" class="sw sw2"/><circle cx="80" cy="120" r="20" class="sw sw3"/><circle cx="80" cy="170" r="20" class="sw sw4"/>
+                </g>
+
+                <!-- 5. ISBN e ficha catalográfica -->
+                <g class="scene" data-scene="4">
+                  <rect x="70" y="80" width="200" height="140" rx="8" class="paper"/>
+                  <path class="ln" pathLength="1" d="M90 110 H250"/><path class="ln" pathLength="1" d="M90 135 H220"/><path class="ln" pathLength="1" d="M90 160 H240"/><path class="ln" pathLength="1" d="M90 185 H200"/>
+                  <g class="barcode">
+                    <rect x="170" y="240" width="170" height="110" rx="8" class="paper2"/>
+                    <g class="bars">
+                      <rect x="188" y="256" width="4" height="62"/><rect x="196" y="256" width="2" height="62"/><rect x="202" y="256" width="6" height="62"/><rect x="212" y="256" width="2" height="62"/><rect x="218" y="256" width="4" height="62"/><rect x="226" y="256" width="2" height="62"/><rect x="232" y="256" width="6" height="62"/><rect x="242" y="256" width="2" height="62"/><rect x="248" y="256" width="4" height="62"/><rect x="256" y="256" width="6" height="62"/><rect x="266" y="256" width="2" height="62"/><rect x="272" y="256" width="4" height="62"/><rect x="280" y="256" width="2" height="62"/><rect x="286" y="256" width="6" height="62"/><rect x="296" y="256" width="2" height="62"/><rect x="302" y="256" width="4" height="62"/><rect x="310" y="256" width="2" height="62"/><rect x="316" y="256" width="6" height="62"/>
+                    </g>
+                    <text x="255" y="338" class="svg-label">ISBN 978</text>
+                  </g>
+                  <path class="scan" d="M178 286 H332"/>
+                </g>
+
+                <!-- 6. Publicação física e digital -->
+                <g class="scene" data-scene="5">
+                  <g class="float-slow">
+                    <path class="cover" d="M70 120 h110 a8 8 0 0 1 8 8 v190 a8 8 0 0 1 -8 8 h-110z"/>
+                    <rect x="70" y="120" width="14" height="206" class="spine"/>
+                    <path class="ln" pathLength="1" d="M105 170 H160 M105 190 H150"/>
+                  </g>
+                  <rect x="220" y="90" width="120" height="220" rx="16" class="device"/>
+                  <rect x="232" y="108" width="96" height="172" rx="4" class="screen"/>
+                  <path class="ln" pathLength="1" d="M246 140 H314 M246 160 H306 M246 180 H314 M246 200 H296 M246 220 H310"/>
+                  <circle cx="280" cy="294" r="6" class="dot"/>
+                  <path class="arrow" pathLength="1" d="M190 220 C 205 200, 210 190, 222 180"/>
+                </g>
+
+                <!-- 7. Livretos e materiais formativos e religiosos -->
+                <g class="scene" data-scene="6">
+                  <rect x="110" y="150" width="190" height="150" rx="6" class="paper booklet b-3"/>
+                  <rect x="100" y="130" width="190" height="150" rx="6" class="paper2 booklet b-2"/>
+                  <g class="booklet b-1">
+                    <rect x="90" y="110" width="190" height="150" rx="6" class="cover"/>
+                    <path class="ln" pathLength="1" d="M185 110 V260"/>
+                    <path class="ln" pathLength="1" d="M235 150 V210 M220 168 H250"/>
+                    <path class="ln" pathLength="1" d="M110 150 H165 M110 170 H160 M110 190 H165 M110 210 H150"/>
+                  </g>
+                  <circle cx="300" cy="90" r="40" fill="url(#gSun)" class="pulse"/>
+                </g>
+
+                <!-- 8. Divulgação e lançamento -->
+                <g class="scene" data-scene="7">
+                  <g class="rays">
+                    <path d="M200 160 L120 40 L160 40z"/><path d="M200 160 L240 40 L280 40z"/><path d="M200 160 L330 90 L345 120z"/><path d="M200 160 L55 120 L70 90z"/>
+                  </g>
+                  <circle cx="200" cy="160" r="80" fill="url(#gSun)" class="pulse"/>
+                  <g class="float">
+                    <path class="cover" d="M150 150 h100 v130 h-100z"/>
+                    <rect x="150" y="150" width="12" height="130" class="spine"/>
+                    <path class="ln" pathLength="1" d="M205 180 V230 M190 194 H220"/>
+                  </g>
+                  <rect x="110" y="300" width="180" height="22" rx="4" class="paper2"/>
+                  <rect x="130" y="322" width="140" height="30" rx="4" class="paper"/>
+                  <g class="sparks"><path d="M90 220 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M310 230 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M320 160 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M80 160 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/></g>
+                </g>
+              </svg>
+          </div>
+
+          <div class="showcase__info">
+            <div class="showcase__top">
+              <span class="showcase__count"><b class="showcase__num">01</b><span> / 08</span></span>
+              <div class="showcase__arrows">
+                <button class="showcase__arrow" data-prev aria-label="Serviço anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+                <button class="showcase__arrow" data-next aria-label="Próximo serviço"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+              </div>
+            </div>
+            <div class="showcase__panels" aria-live="polite">
+                <article class="svc-panel is-active" data-i="0" aria-hidden="false">
+                  <h3>Orientação e acompanhamento de autores</h3>
+                  <p>Caminhamos ao seu lado desde a ideia: estrutura da obra, prazos, escolhas editoriais e cada decisão até o livro pronto.</p>
+                  <ul class="svc-panel__points"><li>Planejamento da obra</li><li>Orientação em cada etapa</li><li>Atendimento próximo e pessoal</li></ul>
+                </article>
+                <article class="svc-panel" data-i="1" aria-hidden="true">
+                  <h3>Revisão e correção de textos</h3>
+                  <p>Ortografia, gramática, coesão e clareza — preservando a sua voz e a força da sua mensagem.</p>
+                  <ul class="svc-panel__points"><li>Ortografia e gramática</li><li>Coesão e clareza</li><li>Respeito à voz do autor</li></ul>
+                </article>
+                <article class="svc-panel" data-i="2" aria-hidden="true">
+                  <h3>Diagramação de livros</h3>
+                  <p>Páginas organizadas com tipografia, margens e respiro de leitura profissionais, prontas para a gráfica.</p>
+                  <ul class="svc-panel__points"><li>Tipografia e margens profissionais</li><li>Miolo pronto para a gráfica</li><li>Leitura confortável</li></ul>
+                </article>
+                <article class="svc-panel" data-i="3" aria-hidden="true">
+                  <h3>Criação de capas e projetos gráficos</h3>
+                  <p>Capas que traduzem a alma da obra e chamam o leitor — do conceito à arte final.</p>
+                  <ul class="svc-panel__points"><li>Conceito criativo</li><li>Arte final da capa</li><li>Projeto gráfico completo</li></ul>
+                </article>
+                <article class="svc-panel" data-i="4" aria-hidden="true">
+                  <h3>Orientação para ISBN e ficha catalográfica</h3>
+                  <p>Ajudamos a obter o registro do seu livro e a ficha catalográfica, para que ele exista oficialmente.</p>
+                  <ul class="svc-panel__points"><li>Orientação para o ISBN</li><li>Ficha catalográfica</li><li>Seu livro registrado oficialmente</li></ul>
+                </article>
+                <article class="svc-panel" data-i="5" aria-hidden="true">
+                  <h3>Publicação de livros físicos e digitais</h3>
+                  <p>Sua obra impressa e também em formato digital, para alcançar leitores onde eles estiverem.</p>
+                  <ul class="svc-panel__points"><li>Livro impresso</li><li>Versão digital (e-book)</li><li>Mais alcance para a sua obra</li></ul>
+                </article>
+                <article class="svc-panel" data-i="6" aria-hidden="true">
+                  <h3>Livretos, materiais formativos e religiosos</h3>
+                  <p>Livretos de oração, materiais para paróquias, comunidades, movimentos, escolas e projetos sociais.</p>
+                  <ul class="svc-panel__points"><li>Livretos de oração</li><li>Materiais formativos</li><li>Para paróquias, movimentos e escolas</li></ul>
+                </article>
+                <article class="svc-panel" data-i="7" aria-hidden="true">
+                  <h3>Apoio na divulgação e no lançamento</h3>
+                  <p>Estratégia, materiais e presença para que o seu livro chegue às mãos de quem precisa lê-lo.</p>
+                  <ul class="svc-panel__points"><li>Estratégia de divulgação</li><li>Materiais de lançamento</li><li>Orientação para eventos e redes</li></ul>
+                </article>
+            </div>
+            <div class="showcase__bottom">
+              <a class="btn btn--gold magnetic showcase__cta" href="https://wa.me/5521981814835" target="_blank" rel="noopener"><span>Quero este serviço</span></a>
+              <span class="showcase__progress" aria-hidden="true"><i></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-tabs reveal" role="tablist" aria-label="Escolha um serviço">
+            <button class="svc-tab is-active" data-go="0" role="tab" aria-selected="true"><span class="svc-tab__num">01</span><span class="svc-tab__name">Acompanhamento</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="1" role="tab" aria-selected="false"><span class="svc-tab__num">02</span><span class="svc-tab__name">Revisão</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="2" role="tab" aria-selected="false"><span class="svc-tab__num">03</span><span class="svc-tab__name">Diagramação</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="3" role="tab" aria-selected="false"><span class="svc-tab__num">04</span><span class="svc-tab__name">Capas</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="4" role="tab" aria-selected="false"><span class="svc-tab__num">05</span><span class="svc-tab__name">ISBN e ficha</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="5" role="tab" aria-selected="false"><span class="svc-tab__num">06</span><span class="svc-tab__name">Físico e digital</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="6" role="tab" aria-selected="false"><span class="svc-tab__num">07</span><span class="svc-tab__name">Livretos</span><span class="svc-tab__bar"></span></button>
+            <button class="svc-tab" data-go="7" role="tab" aria-selected="false"><span class="svc-tab__num">08</span><span class="svc-tab__name">Lançamento</span><span class="svc-tab__bar"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAL ============ -->
+    <section class="section publish" id="publique">
+      <div class="container">
+        <div class="differential">
+          <p class="eyebrow eyebrow--dark reveal">Nosso diferencial</p>
+          <blockquote class="differential__quote" data-split-words>
+            Um livro não é simplesmente um conjunto de páginas, mas uma <em>oportunidade de transformar vidas.</em>
+          </blockquote>
+          <p class="differential__text reveal" data-delay="3">Queremos caminhar ao lado de cada autor, desde as primeiras palavras até a concretização de sua obra.</p>
+        </div>
+
+        <ol class="steps">
+          <svg class="steps__line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="2" x2="1000" y2="2"/></svg>
+          <li class="step reveal" data-delay="0"><span class="step__dot">1</span><h3>Primeira conversa</h3><p>Ouvimos sua história, seu sonho e o propósito do seu livro.</p></li>
+          <li class="step reveal" data-delay="2"><span class="step__dot">2</span><h3>Texto lapidado</h3><p>Leitura, orientação, revisão e correção cuidadosas.</p></li>
+          <li class="step reveal" data-delay="4"><span class="step__dot">3</span><h3>Projeto gráfico</h3><p>Diagramação, capa, ISBN e ficha catalográfica.</p></li>
+          <li class="step reveal" data-delay="6"><span class="step__dot">4</span><h3>Publicação e lançamento</h3><p>Livro impresso ou digital, divulgado e nas mãos dos leitores.</p></li>
+        </ol>
+
+        <div class="invite reveal-clip">
+          <div class="invite__card">
+            <div class="invite__text">
+              <h3>Você tem uma história para contar? Tem o sonho de <em>escrever um livro?</em></h3>
+              <p>Permita-nos fazer parte dessa realização. Porque nunca é tarde para escrever uma nova página da sua história.</p>
+            </div>
+            <a class="btn btn--gold magnetic" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Tenho%20uma%20hist%C3%B3ria%20para%20contar%20e%20gostaria%20de%20publicar%20meu%20livro%20com%20a%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener"><span>Quero publicar meu livro</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOVA CAPA: DROGAS, SERÁ QUE PRECISO DISSO? ============ -->
     <section class="feature" id="destaque">
       <div class="feature__bg" aria-hidden="true"></div>
       <div class="container feature__grid">
         <div class="feature__cover reveal-clip">
-          <div class="book3d" data-tilt>
-            <img src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="Capa do livro O Chão Não É Moradia para os Filhos de Deus, de Irmão Ricardo Lavra Lima" loading="lazy" />
-            <span class="book3d__spine"></span>
-            <span class="book3d__shine"></span>
+          <div class="compare" data-compare>
+            <img class="compare__img compare__img--before" src="assets/img/livro-drogas-sera-que-preciso-disso-capa-original.webp" alt="Capa original de 2000 do livro Drogas, Será que Preciso Disso?" loading="lazy" />
+            <div class="compare__after">
+              <img class="compare__img" src="assets/img/livro-drogas-sera-que-preciso-disso.webp" alt="Nova capa do livro Drogas, Será que Preciso Disso?" loading="lazy" />
+            </div>
+            <span class="compare__tag compare__tag--before">Capa original · 2000</span>
+            <span class="compare__tag compare__tag--after">Nova capa</span>
+            <div class="compare__handle" aria-hidden="true"><span>‹ ›</span></div>
+            <input class="compare__range" type="range" min="0" max="100" value="55" aria-label="Arraste para comparar a capa original com a nova capa" />
           </div>
+          <p class="compare__hint">Arraste para comparar a capa original com a nova</p>
         </div>
         <div class="feature__content">
-          <p class="eyebrow reveal">Em destaque</p>
-          <h2 class="feature__title reveal" data-delay="1">O Chão Não É Moradia para os Filhos de Deus</h2>
-          <p class="feature__author reveal" data-delay="2">Irmão Ricardo Lavra Lima</p>
+          <p class="eyebrow reveal">Nova capa · Obra pioneira</p>
+          <h2 class="feature__title reveal" data-delay="1">Drogas, Será que Preciso Disso?</h2>
+          <p class="feature__author reveal" data-delay="2">Irmão Ricardo Lavra</p>
           <blockquote class="feature__quote reveal" data-delay="3">
-            Quantas lágrimas uma mãe derrama enquanto espera seu filho voltar?
+            Dizem que um livro se compra pela capa. Este, com certeza, também se compra pelo conteúdo.
           </blockquote>
           <p class="feature__text reveal" data-delay="4">
-            Em 21 capítulos marcados por histórias reais, testemunhos e profundas reflexões, o autor conduz o leitor por uma realidade que muitos preferem não enxergar: o sofrimento provocado pela dependência química e as feridas que ela deixa em famílias inteiras.
+            Lançado em julho de 2000, o primeiro livro do Irmão Ricardo teve 15 mil exemplares — e todos se esgotaram. Agora, sua história ganha uma capa à altura do que ela representa: mais forte, mais atual, impossível de passar despercebida.
           </p>
-          <ul class="tags reveal" data-delay="5">
-            <li>Encontro</li><li>Esperança</li><li>Restauração</li><li>Propósito</li>
+          <p class="feature__text reveal" data-delay="5">
+            Mas quem abre suas páginas descobre o verdadeiro motivo de tantos exemplares terem passado de mão em mão: o testemunho real de 13 anos de dependência química, transformados pela fé e pelo encontro com a misericórdia de Deus. <strong>A capa convida. O conteúdo transforma.</strong>
+          </p>
+          <ul class="tags reveal" data-delay="6">
+            <li>15 mil exemplares</li><li>História verídica</li><li>Prevenção</li><li>Esperança</li>
           </ul>
-          <div class="feature__buy reveal" data-delay="6">
-            <span class="price"><small>R$</small>49,90</span>
-            <button class="btn btn--gold magnetic" data-open-book="o-chao"><span>Ler resumo completo</span></button>
+          <div class="feature__buy reveal" data-delay="7">
+            <button class="btn btn--gold magnetic" data-open-book="drogas-sera"><span>Ler resumo completo</span></button>
+            <a class="link-arrow link-arrow--light" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Tenho%20interesse%20no%20livro%20%22Drogas%2C%20Ser%C3%A1%20que%20Preciso%20Disso%3F%22." target="_blank" rel="noopener">Quero este livro <i>→</i></a>
           </div>
         </div>
       </div>
@@ -207,71 +457,34 @@
         <div class="section-head section-head--split">
           <div>
             <p class="eyebrow eyebrow--dark reveal">Catálogo</p>
-            <h2 class="h2 reveal" data-delay="1">Livros que <em>estendem a mão</em></h2>
+            <h2 class="h2 reveal" data-delay="1">Livros que <em>alcançam corações</em></h2>
           </div>
           <p class="section-head__aside reveal" data-delay="2">Clique em um livro para ler o resumo e fazer seu pedido diretamente pelo WhatsApp.</p>
         </div>
 
-        <div class="books">
-          <article class="book reveal" data-delay="0">
-            <button class="book__btn" data-open-book="o-chao" aria-label="Ver detalhes de O Chão Não É Moradia para os Filhos de Deus">
-              <div class="book__cover" data-tilt>
-                <img src="assets/img/livro-o-chao-nao-e-moradia.webp" alt="Capa de O Chão Não É Moradia para os Filhos de Deus" loading="lazy" />
-                <span class="book__shine"></span>
-              </div>
-              <span class="book__badge">Destaque</span>
-            </button>
-            <div class="book__info">
-              <h3>O Chão Não É Moradia para os Filhos de Deus</h3>
-              <p class="book__author">Irmão Ricardo Lavra Lima</p>
-              <div class="book__row"><span class="price price--sm"><small>R$</small>49,90</span><button class="link-arrow" data-open-book="o-chao">Resumo <i>→</i></button></div>
-            </div>
-          </article>
-
-          <article class="book reveal" data-delay="2">
-            <button class="book__btn" data-open-book="gritos" aria-label="Ver detalhes de Gritos pela Sobriedade">
-              <div class="book__cover" data-tilt>
-                <img src="assets/img/livro-gritos-pela-sobriedade.webp" alt="Capa de Gritos pela Sobriedade" loading="lazy" />
-                <span class="book__shine"></span>
-              </div>
-            </button>
-            <div class="book__info">
-              <h3>Gritos pela Sobriedade</h3>
-              <p class="book__author">Irmão Ricardo Lavra</p>
-              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="gritos">Resumo <i>→</i></button></div>
-            </div>
-          </article>
-
-          <article class="book reveal" data-delay="4">
-            <button class="book__btn" data-open-book="viver" aria-label="Ver detalhes de Viver é Complexo — Saindo do Inferno">
-              <div class="book__cover" data-tilt>
-                <img src="assets/img/livro-viver-e-complexo.webp" alt="Capa de Viver é Complexo — Saindo do Inferno" loading="lazy" />
-                <span class="book__shine"></span>
-              </div>
-              <span class="book__badge book__badge--alt">HQ</span>
-            </button>
-            <div class="book__info">
-              <h3>Viver é Complexo — Saindo do Inferno</h3>
-              <p class="book__author">Ricardo Lavra Lima &amp; Gilliard Viana</p>
-              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="viver">Resumo <i>→</i></button></div>
-            </div>
-          </article>
-
-          <article class="book reveal" data-delay="6">
-            <button class="book__btn" data-open-book="lapis" aria-label="Ver detalhes de Um Lápis nas Mãos de Deus">
-              <div class="book__cover" data-tilt>
-                <img src="assets/img/livro-um-lapis-nas-maos-de-deus.webp" alt="Capa de Um Lápis nas Mãos de Deus, 3ª edição" loading="lazy" />
-                <span class="book__shine"></span>
-              </div>
-              <span class="book__badge book__badge--alt">3ª edição</span>
-            </button>
-            <div class="book__info">
-              <h3>Um Lápis nas Mãos de Deus</h3>
-              <p class="book__author">Irmão Ricardo &amp; Diogo Andrade</p>
-              <div class="book__row"><span class="price price--sm"><small>R$</small>29,90</span><button class="link-arrow" data-open-book="lapis">Resumo <i>→</i></button></div>
-            </div>
-          </article>
+        <div class="filters reveal" role="tablist" aria-label="Filtrar livros por tema">
+          <button class="filter is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="espiritualidade" role="tab" aria-selected="false">Espiritualidade e oração</button>
+          <button class="filter" data-filter="testemunhos" role="tab" aria-selected="false">Testemunhos</button>
+          <button class="filter" data-filter="quadrinhos" role="tab" aria-selected="false">Quadrinhos</button>
+          <button class="filter" data-filter="historia" role="tab" aria-selected="false">História e devoção</button>
         </div>
+
+        <!-- Os livros são montados automaticamente a partir de assets/js/books.js -->
+        <div class="books" id="books-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PRÓXIMOS LANÇAMENTOS ============ -->
+    <section class="launches" id="lancamentos">
+      <div class="launches__light" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Em breve</p>
+          <h2 class="h2 h2--light reveal" data-delay="1">Próximos <em>lançamentos</em></h2>
+          <p class="section-head__lead launches__lead reveal" data-delay="2">Novas obras sendo preparadas com carinho. Peça para ser avisado e seja um dos primeiros a ter o seu exemplar.</p>
+        </div>
+        <div class="launches__grid" id="launches-grid"></div>
       </div>
     </section>
 
@@ -279,105 +492,76 @@
     <section class="audience">
       <div class="container audience__grid">
         <div>
-          <p class="eyebrow reveal">Para quem escrevemos</p>
-          <h2 class="h2 h2--light reveal" data-delay="1">Livros para quem <em>não desistiu</em> do recomeço</h2>
+          <p class="eyebrow reveal">Para quem é a Recomeços</p>
+          <h2 class="h2 h2--light reveal" data-delay="1">Cada pessoa carrega uma história que <em>merece ser contada</em></h2>
         </div>
         <ul class="audience__list">
-          <li class="reveal" data-delay="1"><span class="check"></span>Quem luta contra vícios e procura uma saída</li>
-          <li class="reveal" data-delay="2"><span class="check"></span>Quem ama alguém que está nessa batalha</li>
-          <li class="reveal" data-delay="3"><span class="check"></span>Quem trabalha com recuperação e acolhimento</li>
-          <li class="reveal" data-delay="4"><span class="check"></span>Quem acredita que a sobriedade — e a restauração — são possíveis</li>
+          <li class="reveal" data-delay="1"><span class="check"></span>Novos escritores que sonham com o primeiro livro</li>
+          <li class="reveal" data-delay="2"><span class="check"></span>Autores com uma obra pronta para publicar</li>
+          <li class="reveal" data-delay="3"><span class="check"></span>Paróquias, comunidades e movimentos que precisam de livretos e materiais formativos</li>
+          <li class="reveal" data-delay="4"><span class="check"></span>Escolas, famílias e projetos sociais em busca de conteúdos de fé, prevenção e esperança</li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ AUTOR ============ -->
-    <section class="section author" id="autor">
-      <div class="container author__grid">
-        <div class="author__visual reveal-clip">
-          <div class="author__frame">
-            <span class="author__initials">IR</span>
-            <svg class="author__ring" viewBox="0 0 200 200" aria-hidden="true">
-              <defs><path id="circ" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
-              <text><textPath href="#circ">ENCONTRO • ESPERANÇA • RESTAURAÇÃO • PROPÓSITO • </textPath></text>
-            </svg>
-          </div>
+    <!-- ============ QUEM SOMOS ============ -->
+    <section class="section author" id="quem-somos">
+      <div class="container author__grid author__grid--text">
+        <div class="author__content">
+          <p class="eyebrow eyebrow--dark reveal">Quem somos</p>
+          <h2 class="h2 reveal" data-delay="1">Ricardo Lavra Lima &amp; <em>Ricardo Lavra Lima Filho</em></h2>
+          <p class="author__role reveal" data-delay="2">Uma iniciativa da Comunidade Servos da Divina Misericórdia</p>
         </div>
         <div class="author__content">
-          <p class="eyebrow eyebrow--dark reveal">Autor</p>
-          <h2 class="h2 reveal" data-delay="1">Irmão Ricardo <em>Lavra Lima</em></h2>
-          <p class="author__role reveal" data-delay="2">Fundador da Comunidade Católica Servos da Divina Misericórdia</p>
-          <p class="reveal" data-delay="3">
-            Irmão Ricardo dedica sua escrita a quem a sociedade muitas vezes considera perdido. Em seus livros, reúne histórias reais de dependentes químicos, mães que nunca desistiram e famílias que aprenderam a esperar — sempre à luz da Misericórdia Divina.
+          <p class="author__intro reveal" data-delay="3">
+            A Editora Recomeços nasce de quem conhece, por experiência, o poder de uma história bem contada. Fundamentada nos valores cristãos, a editora abre as portas para novos escritores e para autores que desejam ver suas obras publicadas.
           </p>
-          <p class="reveal" data-delay="4">
-            Ao lado de coautores como Diogo Andrade e Gilliard Viana, transforma testemunhos em obras que acolhem, alertam e apontam um caminho de volta.
-          </p>
-          <blockquote class="author__quote reveal" data-delay="5">“O chão não é moradia para os filhos de Deus.”</blockquote>
+          <p class="authors__label reveal" data-delay="4">Autores da Recomeços</p>
+          <ul class="authors reveal" data-delay="5">
+            <li>Irmão Ricardo Lavra Lima</li><li>Ricardo Filho</li><li>Diogo Andrade</li><li>Gilliard Viana</li><li>Marcelo Morais</li><li>Anderson Rafael</li><li>Pe. Leonardo Tassinari Resende</li><li>Pe. Walnei de Moura Antunes</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ PUBLIQUE ============ -->
-    <section class="section publish" id="publique">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--dark reveal">Publique com a Recomeços</p>
-          <h2 class="h2 reveal" data-delay="1">Sua história pode ser o <em>recomeço</em> de alguém</h2>
-          <p class="section-head__lead reveal" data-delay="2">Tem um testemunho, uma reflexão ou uma obra de fé pronta para ganhar o mundo? Caminhamos com você do primeiro rascunho ao livro nas mãos do leitor.</p>
-        </div>
-
-        <ol class="steps">
-          <svg class="steps__line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="2" x2="1000" y2="2"/></svg>
-          <li class="step reveal" data-delay="0"><span class="step__dot">1</span><h3>Conversa inicial</h3><p>Ouvimos sua história e entendemos o propósito do seu livro.</p></li>
-          <li class="step reveal" data-delay="2"><span class="step__dot">2</span><h3>Leitura e orientação</h3><p>Avaliamos o material e indicamos o melhor caminho editorial.</p></li>
-          <li class="step reveal" data-delay="4"><span class="step__dot">3</span><h3>Texto e capa</h3><p>Revisão, diagramação e uma capa à altura da sua mensagem.</p></li>
-          <li class="step reveal" data-delay="6"><span class="step__dot">4</span><h3>Livro publicado</h3><p>Sua obra impressa e pronta para alcançar novos leitores.</p></li>
-        </ol>
-
-        <div class="publish__cta reveal">
-          <a class="btn btn--navy magnetic" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Gostaria%20de%20publicar%20meu%20livro%20com%20a%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener"><span>Quero publicar meu livro</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CTA FINAL ============ -->
+    <!-- ============ CONTATO ============ -->
     <section class="cta" id="contato">
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="container cta__inner">
         <span class="fleur fleur--light reveal" aria-hidden="true">⚜</span>
-        <h2 class="cta__title" data-split-words>Fale com a <em>Editora Recomeços</em></h2>
-        <p class="cta__lead reveal" data-delay="3">Pedidos de livros, publicações, palestras e parcerias — atendemos pelo WhatsApp.</p>
+        <h2 class="cta__title" data-split-words>Nunca é tarde para escrever uma <em>nova página.</em></h2>
+        <p class="cta__lead reveal" data-delay="3">Publicação de livros, pedidos, livretos, palestras e parcerias — fale com a Editora Recomeços pelo WhatsApp.</p>
         <a class="whats-big reveal magnetic" data-delay="5" href="https://wa.me/5521981814835?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Editora%20Recome%C3%A7os." target="_blank" rel="noopener">
-          <span class="whats-big__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-2 0-3.9-.6-5.5-1.6l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.8 10.1 5 16 5s10.7 4.8 10.7 10.6S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></span>
+          <span class="whats-big__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></span>
           <span class="whats-big__text"><small>WhatsApp</small>(21) 98181-4835</span>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- ============ RODAPÉ ============ -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
         <img src="assets/img/logo-sem-contato.webp" alt="Logotipo da Editora Recomeços" width="220" height="179" loading="lazy" />
+        <p class="footer__about">Uma iniciativa da Comunidade Servos da Divina Misericórdia.</p>
       </div>
       <div class="footer__col">
         <h4>Navegue</h4>
         <ul>
           <li><a href="#editora">A Editora</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#autor">Autor</a></li>
+          <li><a href="#servicos">Serviços</a></li>
           <li><a href="#publique">Publique seu livro</a></li>
+          <li><a href="#quem-somos">Quem somos</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Livros</h4>
         <ul>
-          <li><button data-open-book="o-chao">O Chão Não É Moradia</button></li>
-          <li><button data-open-book="gritos">Gritos pela Sobriedade</button></li>
-          <li><button data-open-book="viver">Viver é Complexo</button></li>
-          <li><button data-open-book="lapis">Um Lápis nas Mãos de Deus</button></li>
+          <li><a href="#catalogo">Catálogo completo</a></li>
+          <li><a href="#lancamentos">Próximos lançamentos</a></li>
+          <li><button data-open-book="drogas-sera">Drogas, Será que Preciso Disso?</button></li>
+          <li><button data-open-book="drogas-liberdade">Drogas: Liberdade ou Ilusão? (gratuito)</button></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -399,13 +583,19 @@
     <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.2c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm5.9 15.2c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
   </a>
 
-  <!-- ============ MODAL DO LIVRO ============ -->
+  <!-- ============ JANELA DO LIVRO ============ -->
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
     <div class="modal__backdrop" data-close></div>
     <div class="modal__panel">
       <button class="modal__close" data-close aria-label="Fechar">×</button>
       <div class="modal__grid">
-        <div class="modal__cover"><img id="modal-img" src="" alt="" /></div>
+        <div class="modal__cover">
+          <img id="modal-img" src="" alt="" />
+          <figure class="modal__original" id="modal-original" hidden>
+            <img src="" alt="" />
+            <figcaption>Capa original (2000)</figcaption>
+          </figure>
+        </div>
         <div class="modal__body">
           <p class="eyebrow eyebrow--dark" id="modal-kicker"></p>
           <h3 id="modal-title"></h3>

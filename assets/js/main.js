@@ -14,6 +14,73 @@
   /* ---------- Ano no rodapé ---------- */
   $$("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
 
+  /* ---------- Catálogo e lançamentos (montados a partir de books.js) ---------- */
+  const esc = t => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const priceHTML = b => b.preco
+    ? `<span class="price price--sm"><small>R$</small>${esc(b.preco)}</span>`
+    : `<span class="price-tag">${esc(b.precoTexto || "Consulte")}${b.precoNota ? `<small>${esc(b.precoNota)}</small>` : ""}</span>`;
+  const livros = Object.entries(window.LIVROS || {});
+  const grid = $("#books-grid");
+  if (grid) {
+    grid.innerHTML = livros.filter(([, b]) => b.categoria !== "lancamento").map(([id, b], i) => `
+      <article class="book reveal" data-delay="${(i % 4) * 2}" data-cat="${esc(b.categoria)}">
+        <button class="book__btn" data-open-book="${esc(id)}" aria-label="Ver detalhes de ${esc(b.titulo)}">
+          <div class="book__cover" data-tilt>
+            <img src="${esc(b.imagem)}" alt="Capa de ${esc(b.titulo)}" loading="lazy" />
+            <span class="book__shine"></span>
+          </div>
+          ${b.selo ? `<span class="book__badge">${esc(b.selo)}</span>` : ""}
+        </button>
+        <div class="book__info">
+          <p class="book__kicker">${esc(b.kicker)}</p>
+          <h3>${esc(b.titulo)}</h3>
+          <p class="book__author">${esc(b.autor)}</p>
+          <div class="book__row">${priceHTML(b)}<button class="link-arrow" data-open-book="${esc(id)}">Resumo <i>→</i></button></div>
+        </div>
+      </article>`).join("");
+  }
+  const lgrid = $("#launches-grid");
+  if (lgrid) {
+    lgrid.innerHTML = livros.filter(([, b]) => b.categoria === "lancamento").map(([id, b], i) => `
+      <article class="launch reveal" data-delay="${i * 2}">
+        <button class="launch__cover" data-open-book="${esc(id)}" aria-label="Ver detalhes de ${esc(b.titulo)}">
+          <span class="launch__halo" aria-hidden="true"></span>
+          <div class="book3d" data-tilt>
+            <img src="${esc(b.imagem)}" alt="Capa de ${esc(b.titulo)}" loading="lazy" />
+            <span class="book3d__spine"></span><span class="book3d__shine"></span>
+          </div>
+          <span class="launch__badge">Em breve</span>
+        </button>
+        <div class="launch__info">
+          <h3>${esc(b.titulo)}</h3>
+          <p class="launch__author">${esc(b.autor)}</p>
+          <div class="launch__actions">
+            <button class="btn btn--ghost btn--sm" data-open-book="${esc(id)}"><span>Saiba mais</span></button>
+            <a class="btn btn--gold btn--sm" href="https://wa.me/${window.WHATS_NUMERO}?text=${encodeURIComponent(b.mensagem || "Olá! Quero ser avisado(a) do lançamento de \"" + b.titulo + "\".")}" target="_blank" rel="noopener"><span>Quero ser avisado</span></a>
+          </div>
+        </div>
+      </article>`).join("");
+  }
+
+  /* ---------- Filtros do catálogo ---------- */
+  $$(".filter").forEach(btn => btn.addEventListener("click", () => {
+    const f = btn.dataset.filter;
+    $$(".filter").forEach(b => { b.classList.toggle("is-active", b === btn); b.setAttribute("aria-selected", b === btn); });
+    $$("#books-grid .book").forEach((card, i) => {
+      const show = f === "todos" || card.dataset.cat === f;
+      card.classList.toggle("is-hidden", !show);
+      if (show) { card.classList.remove("is-pop"); void card.offsetWidth; card.style.setProperty("--pd", i % 4); card.classList.add("is-pop", "is-in"); }
+    });
+  }));
+
+  /* ---------- Antes e depois da capa ---------- */
+  $$("[data-compare]").forEach(box => {
+    const range = $(".compare__range", box);
+    const set = v => box.style.setProperty("--pos", v + "%");
+    range.addEventListener("input", () => set(range.value));
+    set(range.value);
+  });
+
   /* ---------- Divide textos ---------- */
   // Letras (preloader)
   $$("[data-split]").forEach(el => {
@@ -256,6 +323,72 @@
     draw();
   }
 
+
+  /* ---------- Serviços: vitrine com setas, números e troca automática ---------- */
+  const show = $("[data-showcase]");
+  if (show) {
+    const scenes = $$(".scene", show);
+    const panels = $$(".svc-panel", show);
+    const tabs = $$(".svc-tab");
+    const numEl = $(".showcase__num", show);
+    const cta = $(".showcase__cta", show);
+    const bar = $(".showcase__progress", show);
+    const total = panels.length;
+    const AUTOPLAY = 7000;
+    let cur = 0, timer = null, inView = false, userTook = false;
+
+    const go = (i, dir) => {
+      i = (i + total) % total;
+      const d = dir ?? (i > cur ? 1 : -1);
+      show.style.setProperty("--dir", d);
+      cur = i;
+      scenes.forEach(sc => sc.classList.toggle("is-active", +sc.dataset.scene === i));
+      panels.forEach(p => { const on = +p.dataset.i === i; p.classList.toggle("is-active", on); p.setAttribute("aria-hidden", !on); });
+      tabs.forEach(t => { const on = +t.dataset.go === i; t.classList.toggle("is-active", on); t.setAttribute("aria-selected", on); });
+      numEl.textContent = String(i + 1).padStart(2, "0");
+      const nome = $("h3", panels[i]).textContent;
+      cta.href = `https://wa.me/${window.WHATS_NUMERO}?text=${encodeURIComponent(`Olá! Tenho interesse no serviço "${nome}" da Editora Recomeços.`)}`;
+      restart();
+    };
+    const restart = () => {
+      clearTimeout(timer);
+      bar.classList.remove("is-running"); void bar.offsetWidth;
+      if (!inView || reduceMotion) return;
+      bar.classList.add("is-running");
+      timer = setTimeout(() => { if (!show.classList.contains("is-paused")) go(cur + 1, 1); else restart(); }, userTook ? AUTOPLAY * 1.6 : AUTOPLAY);
+    };
+    show.style.setProperty("--autoplay", AUTOPLAY + "ms");
+
+    $("[data-next]", show).addEventListener("click", () => { userTook = true; show.style.setProperty("--autoplay", AUTOPLAY * 1.6 + "ms"); go(cur + 1, 1); });
+    $("[data-prev]", show).addEventListener("click", () => { userTook = true; show.style.setProperty("--autoplay", AUTOPLAY * 1.6 + "ms"); go(cur - 1, -1); });
+    tabs.forEach(t => t.addEventListener("click", () => { userTook = true; show.style.setProperty("--autoplay", AUTOPLAY * 1.6 + "ms"); go(+t.dataset.go); }));
+
+    // pausa enquanto o mouse está sobre a vitrine
+    show.addEventListener("mouseenter", () => show.classList.add("is-paused"));
+    show.addEventListener("mouseleave", () => { show.classList.remove("is-paused"); restart(); });
+
+    // setas do teclado quando a seção está visível
+    document.addEventListener("keydown", e => {
+      if (!inView || body.classList.contains("modal-open")) return;
+      if (e.key === "ArrowRight") go(cur + 1, 1);
+      if (e.key === "ArrowLeft") go(cur - 1, -1);
+    });
+
+    // deslizar com o dedo (celular)
+    const stageEl = $(".showcase__stage", show);
+    let sx = null;
+    stageEl.addEventListener("touchstart", e => (sx = e.touches[0].clientX), { passive: true });
+    stageEl.addEventListener("touchend", e => {
+      if (sx === null) return;
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) { userTook = true; go(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); }
+      sx = null;
+    });
+
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; restart(); }, { threshold: 0.35 }).observe(show);
+    go(0, 1);
+  }
+
   /* ---------- Modal dos livros ---------- */
   const modal = $("#modal");
   let lastFocus = null;
@@ -269,9 +402,15 @@
     $("#modal-title").textContent = b.titulo;
     $("#modal-author").textContent = b.autor;
     $("#modal-text").innerHTML = b.resumo.map(p => (p.startsWith("<span class='modal__subtitle'") ? `<div>${p}</div>` : `<p>${p}</p>`)).join("");
-    $("#modal-price").innerHTML = `<small>R$</small>${b.preco}`;
-    const msg = `Olá! Tenho interesse no livro "${b.titulo}" (R$ ${b.preco}). Como faço para comprar?`;
+    $("#modal-price").innerHTML = b.preco ? `<small>R$</small>${b.preco}` : `<span class="price__text">${b.precoTexto || "Consulte"}</span>${b.precoNota ? `<em class="price__note">${b.precoNota}</em>` : ""}`;
+    const orig = $("#modal-original");
+    if (b.imagemOriginal) { $("img", orig).src = b.imagemOriginal; $("img", orig).alt = "Capa original de " + b.titulo; orig.hidden = false; }
+    else orig.hidden = true;
+    const msg = b.mensagem || (b.preco
+      ? `Olá! Tenho interesse no livro "${b.titulo}" (R$ ${b.preco}). Como faço para comprar?`
+      : `Olá! Tenho interesse no livro "${b.titulo}". Pode me passar mais informações?`);
     $("#modal-whats").href = `https://wa.me/${window.WHATS_NUMERO}?text=${encodeURIComponent(msg)}`;
+    $("#modal-whats span").textContent = b.cta || "Comprar pelo WhatsApp";
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     body.classList.add("modal-open");

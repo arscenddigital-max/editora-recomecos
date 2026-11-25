@@ -25,8 +25,10 @@ editora-recomecos/
 ## Como adicionar um livro novo
 
 1. Coloque a capa em `assets/img/` (de preferência `.webp`, 800 px de largura).
-2. Abra `assets/js/books.js`, copie um bloco e altere `titulo`, `autor`, `preco`, `imagem` e `resumo`.
-3. Em `index.html`, copie um `<article class="book">` da seção **Catálogo** e troque o `data-open-book` pelo novo id.
+2. Abra `assets/js/books.js`, copie um bloco e altere `titulo`, `autor`, `preco` (ou `precoTexto`), `imagem`, `categoria` e `resumo`.
+3. Pronto: o livro aparece sozinho no catálogo. Com `categoria: "lancamento"` ele vai para **Próximos lançamentos**.
+
+A ordem dos livros no site é a ordem em que aparecem no `books.js`.
 
 ## Ver o site no computador
 
