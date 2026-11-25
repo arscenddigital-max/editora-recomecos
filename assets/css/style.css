@@ -680,7 +680,9 @@ body.is-ready .stack__book--4 { transform: translate(-50%, -50%) translate(84%, 
 }
 
 /* ---------- Leque de livros no início (efeito baralho) ---------- */
-.hero__fan { --w: clamp(120px, 11vw, 165px); --step: clamp(32px, 3.3vw, 52px); }
+.hero__fan { --w: clamp(120px, 11vw, 165px); --step: clamp(32px, 3.3vw, 52px); transform-style: flat; }
+/* sem 3D no leque: assim o livro escolhido sempre fica na frente */
+.hero__books:has(.hero__fan) { perspective: none; }
 .fan__book {
   --o: calc(var(--i) - 3.5);
   position: absolute; left: 50%; top: 50%; width: var(--w); padding: 0; cursor: pointer;
@@ -714,7 +716,6 @@ body.is-ready .stack__book--4 { transform: translate(-50%, -50%) translate(84%, 
 .fan__book:hover .fan__cta, .fan__book:focus-visible .fan__cta { opacity: 1; transform: translate(-50%, 0); }
 /* os outros livros escurecem e os da frente se afastam um pouco */
 .hero__fan:has(.fan__book:hover) .fan__book:not(:hover) { filter: brightness(.55) saturate(.8); }
-.hero__fan:has(.fan__book:hover) .fan__book:hover ~ .fan__book { transform: translate(-50%, -50%) translateX(calc(var(--o) * var(--step) + 26px)) translateY(calc(var(--o) * var(--o) * 5px)) rotate(calc(var(--o) * 6deg + 3deg)); }
 @media (hover: none) { .fan__cta { opacity: 1; transform: translate(-50%, 0); font-size: 10px; padding: 6px 10px; bottom: 8px; } .fan__book:not([style*="--i:7"]) .fan__cta { display: none; } }
 @media (max-width: 900px) { .hero__fan { --w: 120px; --step: 30px; } }
 @media (max-width: 560px) { .hero__fan { --w: 84px; --step: 20px; } }
