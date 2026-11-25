@@ -276,7 +276,8 @@
     hero.addEventListener("mousemove", e => {
       const x = e.clientX / innerWidth - 0.5;
       const y = e.clientY / innerHeight - 0.5;
-      stack.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 8}deg) translate3d(${x * 20}px, ${y * 14}px, 0)`;
+      // só desliza levemente (sem girar em 3D), para não embaralhar a ordem dos livros
+      stack.style.transform = `translate3d(${x * 18}px, ${y * 12}px, 0)`;
     });
     hero.addEventListener("mouseleave", () => (stack.style.transform = ""));
   }
